@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] GameObject gameoverCanvas = null;
+ /*   [SerializeField] GameObject gameoverCanvas = null;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player")
@@ -13,5 +13,5 @@ public class GameOver : MonoBehaviour
             gameoverCanvas.SetActive(true);
             Cursor.visible = true;
         }
-    }
+    }*/
 }

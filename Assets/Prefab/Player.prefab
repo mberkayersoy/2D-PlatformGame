@@ -181,7 +181,8 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   dashForce: 8
   groundBreakerForce: 27
-  startDashTimer: 15
+  dashCooldownTime: 1
+  nextDashTime: 0
 --- !u!50 &6248194484650418084
 Rigidbody2D:
   serializedVersion: 4
