@@ -5,11 +5,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 	public float FollowSpeed = 2f;
-	public Transform Target;
+	public GameObject Target;
 
 	// Transform of the camera to shake. Grabs the gameObject's transform
 	// if null.
-	private Transform camTransform;
+	public Transform camTransform;
 
 	// How long the object should shake for.
 	public float shakeDuration = 0f;
@@ -19,6 +19,7 @@ public class CameraFollow : MonoBehaviour
 	public float decreaseFactor = 1.0f;
 
 	Vector3 originalPos;
+	public Vector3 newPosition;
 
 	void Awake()
 	{
@@ -36,7 +37,7 @@ public class CameraFollow : MonoBehaviour
 
 	private void Update()
 	{
-		Vector3 newPosition = Target.position;
+		newPosition = Target.transform.position;
 		newPosition.z = -10;
 		transform.position = Vector3.Slerp(transform.position, newPosition, FollowSpeed * Time.deltaTime);
 

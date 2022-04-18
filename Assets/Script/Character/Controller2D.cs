@@ -51,7 +51,7 @@ public class Controller2D : MonoBehaviour
     }
 
     private void DashMechanic()
-    {   
+    {  
         if (side == 0)
         {
             if (Input.GetKeyDown(KeyCode.A))
@@ -138,7 +138,6 @@ public class Controller2D : MonoBehaviour
         boxCollider2D.bounds.size, 0f, Vector2.down, extraHeightTest, platformLayerMask);
         return raycastHit.collider != null;*/
     }
-    
     private void PlayerRotation()
     {
         if (Input.GetAxisRaw("Horizontal") == -1)
@@ -150,4 +149,5 @@ public class Controller2D : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
     }
+
 }
