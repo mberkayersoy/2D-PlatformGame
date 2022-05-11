@@ -22,6 +22,7 @@ public class Controller2D : MonoBehaviour
     public float dashCooldownTime = 1;
     public float nextDashTime = 0;
     GroundCheck groundCheck;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -143,10 +144,12 @@ public class Controller2D : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            //weaponTransform.Rotate(0f, 180f, 0f);
         }
         else if (Input.GetAxisRaw("Horizontal") == 1)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            //weaponTransform.Rotate(0f, 0f, 0f);
         }
     }
 
